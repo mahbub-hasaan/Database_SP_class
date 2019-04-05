@@ -1,0 +1,23 @@
+﻿@model IEnumerable<Db_store.Models.User>
+@{
+    ViewBag.Title = "Home Page";
+}
+<table class="table table-hover">
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+    </tr>
+    @{
+        foreach (var m in Model)
+        {
+            <tr>
+                <td>@m.UserName</td>
+                <td>@m.UserEmail</td>
+                <td>@m.UserPhone</td>
+            </tr>
+            
+        }
+    }
+</table>
+
