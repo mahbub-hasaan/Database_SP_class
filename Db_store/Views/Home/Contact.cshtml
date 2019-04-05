@@ -1,8 +1,17 @@
 ﻿@{
     ViewBag.Title = "Transfer Balance";
 }
+@{
+    if (ViewBag.msg != null)
+    {
+        <div class="alert alert-success mt-xl-4">
+            @ViewBag.msg
+        </div>
+    }
+}
 <div class="row">
     <div class="col-md-6 mt-xl-5">
+        <h1 class="h1">Transfer Balance</h1>
         <form class="form-group" action="Contact" method="post">
             <div class="form-group">
                 <input type="text" name="source" placeholder="Source Account" class="form-control" />
